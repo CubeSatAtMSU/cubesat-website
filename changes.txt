@@ -1,0 +1,53 @@
+1) mission carousel
+- right now there is no need for a carousel, so make a new missions carousel component that pretty much has no arrows when there's only 3 elements? need a way to have a carousel for future use but do not need it now
+- or it could stay as 3 with a button to the all missions page
+
+2) missions dropdown
+- see how to handle this?
+- because over time more missions will be added and stuff. maybe a separate missions page? naw that's kinda a lot
+- so either a hover dropdown menu for all the missions
+	- better for easier to go to other missions
+	- worse for mission discovery
+- or a click will just lead you to the missions page
+	- better for having a visual of the missions
+	- worse bc two clicks to reach a new mission
+- or both? a dropdown with an all missions link plus links for each individual mission? and then you can quickly click to missions or you can just click for the missions page?
+
+3) donation link
+- become a sponsor will lead to this link
+- https://dda.msstate.edu/give-now?f=313064
+
+4) newsletter embed pdf
+- so pretty much just newsletters short hero
+- then each newsletter has a header and short description and then click this pdf for the newsletter
+- header for past newsletters -> all the past newsletters will have the same section for ease of adding, they will just be marked as older so under the newsletter section for older newsletters
+- only need a hero plus a newsletter component
+- or even just a recent newsletter plus old newsletter component -> i like that better
+
+5) add gui for adding shit:
+ - everything in missions page
+ - every editable info in landing page
+  - contact info will change
+  - update pictures
+ - newsletter stuff
+ - choosing which missions to feature
+ - need to auto connect stuff to a cdn
+ - need to auto connect stuff to github
+OPTIONS FOR IMPLEMENTATION
+	1) auth them in plus another page for editing in the landing page
+	2) GitHub separate app for editing stuff
+	3) make it a duo  repo -> only the website portion is hosted on vercel BUT the other portion can be installed from GitHub with the website. have scripts that will automate: 1) pulling 2) opening stuff 3) pushing *gui will be for editing and updating code
+	4) OR have it as a separate website with api calls to update the site? ci cd shit??? how would that even work???
+
+so i think overall the best 2 options are
+1) all in one repo with local changes that they just push to GitHub
+	- easiest to code, easiest to maintain
+	- they have to do a lil more work - pulling and stuff may be annoying
+2) a separate website with api calls
+	- auth doesn't have to be real, we could just hide the site and make it password protected
+	- best ux BUT have to set up apis and maintain that AND have another server for hosting it
+	- would probably have to set up a database for the site?
+idk it could be interesting to look at simply automating git commands and then adding a gui for that? we shall see
+
+6) different button lengths are awkward on mobile when they're right next to eachother on the home page
+7) connect everything to a cdn
